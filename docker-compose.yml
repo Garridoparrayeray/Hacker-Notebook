@@ -1,0 +1,14 @@
+services:
+
+  kali:
+    image: kalilinux/kali-rolling
+    container_name: kali
+    restart: unless-stopped
+    tty: true
+    network_mode: "host"
+    stdin_open: true
+    volumes:
+      - ./home:/home
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
