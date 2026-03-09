@@ -1,7 +1,6 @@
 services:
-
   kali:
-    image: kalilinux/kali-rolling
+    build: .
     container_name: kali
     restart: unless-stopped
     tty: true
